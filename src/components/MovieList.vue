@@ -73,7 +73,6 @@ button {
 button:hover {
   cursor: pointer;
 }
-/* todo: fix styling on this button ^^ */
 .wrapper {
   display: flex;
   align-items: center;
