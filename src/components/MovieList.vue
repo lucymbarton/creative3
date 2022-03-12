@@ -16,7 +16,7 @@
   <span v-else>
       <SingleMovieView :movie="selectedMovie" />
     <!-- todo: add listener to this button to go back to all movie view -->
-      <button> Back </button>
+      <button @click="back()"> Back </button>
     </span>
 </div>
 </template>
@@ -45,6 +45,10 @@ export default {
     showMovieInfo(movie){
       this.selectedMovie = movie;
       this.isMovieSelected = true;
+    },
+    back(){
+      this.isMovieSelected = false;
+      this.selectedMovie = {};
     }
   }
 }
