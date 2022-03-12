@@ -4,7 +4,7 @@ let movieData = [
         lifetimeGross: 317575550,
         openingGross: 90294621,
         releaseDate: "November 16, 2001",
-        image: "sorcerers.jpg"
+        image: "1.jpg"
     },
     {
         name: 'Harry Potter and the Chamber of Secrets',
