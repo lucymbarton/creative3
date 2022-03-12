@@ -5,6 +5,9 @@
       <router-link to="/movies">Movies</router-link>
     </nav>
     <router-view/>
+    <footer style="width: 100%; height: 15px; text-align: left;">
+      <a href="https://github.com/lucymbarton/creative3" >Github</a>
+    </footer>
   </div>
 </template>
 
