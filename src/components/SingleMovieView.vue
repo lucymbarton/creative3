@@ -8,8 +8,8 @@
         <div style="width: 50%; padding: 3%;"> 
         <p> Release Date: {{ movie.releaseDate }} </p>
         
-        <p> Opening Gross: {{ movie.openingGross }} </p>
-        <p> Lifetime Gross: {{movie.lifetimeGross}} </p>
+        <p> Opening Gross: ${{ movie.openingGross }} </p>
+        <p> Lifetime Gross: ${{movie.lifetimeGross}} </p>
 
       </div>
     </div>
