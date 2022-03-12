@@ -3,6 +3,7 @@
   <div class="products">
     <div class="product" v-for="movie in movies" :key="movie.number">
       <div class="info">
+        <!-- todo: make this a click -->
         <h1>{{movie.name}}</h1>
         <p>{{ movie.releaseDate }}</p>
       </div>
@@ -62,8 +63,8 @@ export default {
 }
 
 .info {
-  background: #F2921D;
-  color: #000;
+  background: #000000;
+  color: rgb(255, 255, 255);
   padding: 10px 30px;
   height: 80px;
 }
