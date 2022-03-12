@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <h1>Harry Potter</h1>
     
     <MovieList :movies="movies" />
   
@@ -31,3 +30,10 @@ export default {
   // }
 }
 </script>
+
+<style> 
+  .about {
+    background: rgb(83, 83, 83);
+  }
+
+</style>

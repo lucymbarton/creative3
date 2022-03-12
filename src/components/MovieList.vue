@@ -15,8 +15,10 @@
   </div>
   <span v-else>
       <SingleMovieView :movie="selectedMovie" />
-    <!-- todo: add listener to this button to go back to all movie view -->
-      <button @click="back()"> Back </button>
+      <div class="buttonHolder">
+        <button @click="back()"> Back </button>
+      </div>
+      
     </span>
 </div>
 </template>
@@ -55,9 +57,21 @@ export default {
 </script>
 
 <style scoped>
-button {
+.buttonHolder{
   margin-left: auto;
+  text-align: right;
+}
+button {
+  margin-top: 5px;
+  width: 10%;
+  border: none;
+  height: 50px;
+  background: #000;
+  color: white;
+}
 
+button:hover {
+  cursor: pointer;
 }
 /* todo: fix styling on this button ^^ */
 .wrapper {
@@ -121,12 +135,7 @@ button {
   display: flex;
 }
 
-button {
-  height: 50px;
-  background: #000;
-  color: white;
-  border: none;
-}
+
 
 .auto {
   margin-left: auto;
