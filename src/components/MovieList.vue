@@ -1,35 +1,61 @@
 <template>
 <div class="wrapper">
-  <div class="products">
+  <div v-if="!isMovieSelected" class="products">
+
     <div class="product" v-for="movie in movies" :key="movie.number">
-      <div class="info">
-        <!-- todo: make this a click -->
-        <h1>{{movie.name}}</h1>
-        <p>{{ movie.releaseDate }}</p>
-      </div>
-      <div class="image">
-        <img :src="'/images/'+movie.image">
-      </div>
+    <div v-on:click.capture="showMovieInfo(movie)" class="info">
+      <!-- todo: make this a click -->
+      <h1>{{movie.name}}</h1>
+      <p>{{ movie.releaseDate }}</p>
+    </div>
+    <div class="image">
+      <img :src="'/images/'+movie.image">
+    </div>
     </div>
   </div>
+  <span v-else>
+      <SingleMovieView :movie="selectedMovie" />
+    <!-- todo: add listener to this button to go back to all movie view -->
+      <button> Back </button>
+    </span>
 </div>
 </template>
 
 <script>
+import SingleMovieView from './SingleMovieView.vue'
+
 export default {
   name: 'MovieList',
+  components: {
+    SingleMovieView
+  },
   props: {
     movies: Array
+  },
+  data() {
+    return {
+      isMovieSelected: false,
+      selectedMovie: {}
+    }
   },
   methods : {
     getImageUrl(movie){
         return '../assets/' + movie.image
+    },
+    showMovieInfo(movie){
+      this.selectedMovie = movie;
+      this.isMovieSelected = true;
     }
   }
 }
 </script>
 
 <style scoped>
+button {
+  margin-left: auto;
+
+}
+/* todo: fix styling on this button ^^ */
 .wrapper {
   display: flex;
   align-items: center;
@@ -67,6 +93,10 @@ export default {
   color: rgb(255, 255, 255);
   padding: 10px 30px;
   height: 80px;
+}
+
+.info:hover {
+  cursor: pointer;
 }
 
 .info h1 {

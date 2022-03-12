@@ -3,7 +3,7 @@
     <h1>{{movie.name}}</h1>
     <div style="display: flex;">
 
-        <img src="'/images/'+movie.image"/>
+        <img :src="'/images/'+movie.image">
 
         <div style="width: 50%;"> 
         <p> Release Date: {{ movie.releaseDate }} </p>
@@ -11,8 +11,9 @@
         <p> Opening Gross: {{ movie.openingGross }} </p>
         <p> Lifetime Gross: {{movie.lifetimeGross}} </p>
 
+      </div>
     </div>
-    </div>
+    
 
     
     
