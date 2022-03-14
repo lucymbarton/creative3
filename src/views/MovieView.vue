@@ -33,7 +33,7 @@ export default {
 
 <style> 
   .about {
-    background: rgb(83, 83, 83);
+    background: rgb(255, 255, 255);
   }
 
 </style>
